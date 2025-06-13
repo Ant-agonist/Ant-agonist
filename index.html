@@ -8,145 +8,164 @@
   <!-- Intégration Google Font Comic Neue -->
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    /* Polices */
-    body {
-      font-family: 'Comic Neue', cursive, Arial, sans-serif;
-      margin: 0;
-      background: #f8ede3; /* beige clair chaud */
-      color: #4b2e2e; /* marron foncé */
-    }
-    header {
-      background: #8b2e2e; /* rouge brique foncé */
-      color: #f8ede3;
-      padding: 1.5em 2em;
-      text-align: center;
-      box-shadow: 0 3px 8px rgba(139, 46, 46, 0.6);
-    }
-    nav a {
-      color: #f8ede3;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #d45d5d; /* rouge clair */
-    }
-    section {
-      padding: 2em;
-      max-width: 900px;
-      margin: auto;
-      background: #fff0eb; /* très clair rosé */
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(139, 46, 46, 0.15);
-      margin-bottom: 2em;
-    }
-    h1, h2, h3 {
-      color: #8b2e2e;
-      margin-top: 0;
-      font-weight: 700;
-    }
-    .especes {
-      display: flex;
-      gap: 1em;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .carte {
-      background: #f3d6c9; /* beige rosé clair */
-      padding: 1em;
-      border-radius: 12px;
-      box-shadow: 0 3px 6px rgba(139, 46, 46, 0.3);
-      flex: 1 1 220px;
-      text-align: center;
-      transition: transform 0.2s ease;
-      cursor: default;
-    }
-    .carte:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(139, 46, 46, 0.5);
-    }
-    .carte img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 0.6em;
-      border: 2px solid #8b2e2e;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1em;
-      font-size: 1.1em;
-    }
-    table, th, td {
-      border: 1.8px solid #8b2e2e;
-    }
-    th, td {
-      padding: 0.75em 1em;
-      text-align: left;
-    }
-    th {
-      background-color: #d45d5d; /* rouge clair */
-      color: #fff0eb;
-    }
-    tbody tr:nth-child(even) {
-      background-color: #fce9e5; /* rose très clair */
-    }
-    tbody tr:hover {
-      background-color: #f4b6aa; /* rose un peu plus marqué au hover */
-    }
-    ul {
-      list-style-type: square;
-      padding-left: 1.2em;
-      font-size: 1.1em;
-    }
-    footer {
-      background: #8b2e2e;
-      color: #f8ede3;
-      text-align: center;
-      padding: 1em;
-      margin-top: 2em;
-      font-size: 0.95em;
-      font-weight: 600;
-      box-shadow: 0 -3px 8px rgba(139, 46, 46, 0.6);
-    }
-    form input, form textarea {
-      width: 100%;
-      margin-bottom: 1em;
-      padding: 0.6em;
-      border-radius: 6px;
-      border: 1.5px solid #d45d5d;
-      font-family: 'Comic Neue', cursive, Arial, sans-serif;
-      font-size: 1em;
-      resize: vertical;
-      transition: border-color 0.3s ease;
-    }
-    form input:focus, form textarea:focus {
-      border-color: #8b2e2e;
-      outline: none;
-    }
-    button {
-      background-color: #8b2e2e;
-      color: #f8ede3;
-      font-weight: 700;
-      padding: 0.7em 1.4em;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1.1em;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #d45d5d;
-    }
-    /* Responsive */
-    @media (max-width: 600px) {
-      .especes {
-        flex-direction: column;
-      }
-    }
+ /* Police classique monospace pour le look vieux PC */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: #c0c0c0; /* gris métal */
+  color: #000080; /* bleu marine foncé */
+  margin: 0;
+}
+
+/* Encadrement en double bordure pointillée */
+header, section, footer {
+  border: 3px double #000080;
+  background: #ffffff;
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 900px;
+  box-shadow: none;
+}
+
+/* Couleurs flashy, avec un fond à motif très simple */
+body {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #c0c0c0,
+    #c0c0c0 10px,
+    #d0d0d0 10px,
+    #d0d0d0 20px
+  );
+}
+
+/* Header style */
+header {
+  background-color: #000080;
+  color: #ffff00;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  border-style: inset;
+}
+
+/* Liens style “boutons” 90’s */
+nav a {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 4px 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px outset #800000;
+  margin: 0 5px;
+  font-size: 1em;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #ffff00;
+  color: #000080;
+  border-style: inset;
+}
+
+/* Titres avec effet embossé */
+h1, h2, h3 {
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #000080;
+  font-weight: bold;
+}
+
+/* Table avec bordures solides épaisses */
+table, th, td {
+  border: 2px solid #000080;
+}
+
+th {
+  background-color: #000080;
+  color: #ffff00;
+  font-weight: bold;
+}
+
+/* Boutons “relief” style 90’s */
+button {
+  background-color: #000080;
+  color: #ffff00;
+  border: 2px outset #ffff00;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+button:hover {
+  border-style: inset;
+  background-color: #ffff00;
+  color: #000080;
+}
+
+/* Inputs avec bordures pointillées */
+form input, form textarea {
+  border: 2px dotted #000080;
+  background-color: #ffffe0;
+  color: #000080;
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  padding: 4px;
+}
+
+/* Mise en forme du footer */
+footer {
+  background-color: #000080;
+  color: #ffff00;
+  text-align: center;
+  font-weight: bold;
+  border-style: inset;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Image style avec bordures pixelisées */
+.carte img {
+  border: 3px ridge #000080;
+  width: 100%;
+  max-width: 220px;
+}
+
+/* Flex container - revenir au layout vertical (typique 90's) */
+.especes {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Chaque carte prend toute la largeur */
+.carte {
+  border: 2px dotted #000080;
+  background-color: #e0e0ff;
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 300px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive minimaliste */
+@media (max-width: 600px) {
+  .carte {
+    max-width: 100%;
+  }
+}
+
+/* Un petit effet clignotant sur le titre contact (nostalgie) */
+#contact h2 {
+  animation: blink 1.2s steps(2, start) infinite;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
   </style>
 </head>
 <body>
