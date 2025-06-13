@@ -297,6 +297,26 @@
         padding: 4px 6px;
       }
     }
+    #musique-retro {
+  background-color: #000033;
+  padding: 20px;
+  border: 4px ridge #ff9900;
+  box-shadow: 0 0 15px #ff9900 inset;
+  color: #ffff00;
+  font-size: 0.8rem;
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+}
+
+#lecteurMusique {
+  width: 100%;
+  background-color: #000066;
+  border: 3px outset #ffff00;
+  box-shadow: 0 0 10px #ffff00 inset;
+  border-radius: 8px;
+}
   </style>
 </head>
 <body>
@@ -313,7 +333,13 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
+<section id="musique-retro" style="margin-top: 20px;">
+  <h2>🎵 Musique d'ambiance rétro</h2>
+  <audio id="lecteurMusique" controls>
+    <source src="sons/ambiance-retro.mp3" type="audio/mpeg">
+    Votre navigateur ne supporte pas l’audio HTML5.
+  </audio>
+</section>
   <section id="a-propos">
     <h2>À propos</h2>
     <p>Bienvenue sur Louiscreed Fourmis ! Je suis Louiscreed, passionné par le monde fascinant des fourmis. Depuis plus de 10 ans, j’élève différentes espèces et partage mes connaissances avec les débutants comme les experts.</p>
