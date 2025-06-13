@@ -4,173 +4,305 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Louiscreed Fourmis</title>
-  <!-- Intégration Google Font Comic Neue -->
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Louiscreed Fourmis - Vintage 1999</title>
+
+  <!-- Police pixelisée vintage -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
   <style>
- /* Police classique monospace pour le look vieux PC */
-body {
-  font-family: 'Courier New', Courier, monospace;
-  background: #c0c0c0; /* gris métal */
-  color: #000080; /* bleu marine foncé */
-  margin: 0;
-}
+    /* RESET minimal */
+    * {
+      box-sizing: border-box;
+    }
 
-/* Encadrement en double bordure pointillée */
-header, section, footer {
-  border: 3px double #000080;
-  background: #ffffff;
-  padding: 10px;
-  margin: 10px auto;
-  max-width: 900px;
-  box-shadow: none;
-}
+    body {
+      background: #000080; /* bleu marine sombre */
+      color: #ffff00; /* jaune vif */
+      font-family: 'Press Start 2P', monospace, monospace;
+      margin: 0;
+      padding: 0 15px;
+      text-align: center;
+      user-select: none;
+    }
 
-/* Couleurs flashy, avec un fond à motif très simple */
-body {
-  background-image: repeating-linear-gradient(
-    45deg,
-    #c0c0c0,
-    #c0c0c0 10px,
-    #d0d0d0 10px,
-    #d0d0d0 20px
-  );
-}
+    /* Clignotement vintage jaune */
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
 
-/* Header style */
-header {
-  background-color: #000080;
-  color: #ffff00;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.5em;
-  border-style: inset;
-}
+    header {
+      background: linear-gradient(90deg, #ff0000, #ff9900);
+      border: 3px double #ffff00;
+      padding: 1em 0;
+      box-shadow: 0 0 15px #ff0;
+      position: relative;
+      overflow: visible;
+    }
 
-/* Liens style “boutons” 90’s */
-nav a {
-  background-color: #ff0000;
-  color: #ffffff;
-  padding: 4px 8px;
-  text-decoration: none;
-  font-weight: bold;
-  border: 2px outset #800000;
-  margin: 0 5px;
-  font-size: 1em;
-  display: inline-block;
-}
+    header h1 {
+      font-size: 2.4rem;
+      color: #00ff00;
+      animation: blink 1.5s infinite;
+      margin: 0;
+      text-shadow: 1px 1px #000;
+    }
 
-nav a:hover {
-  background-color: #ffff00;
-  color: #000080;
-  border-style: inset;
-}
+    header p {
+      font-size: 0.8rem;
+      margin: 0.3em 0 0;
+      color: #ffff00;
+      text-shadow: 0 0 5px #ff0;
+    }
 
-/* Titres avec effet embossé */
-h1, h2, h3 {
-  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #000080;
-  font-weight: bold;
-}
+    /* Logo animé style gif 90s */
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      width: 64px;
+      height: 64px;
+      animation: spin 4s linear infinite;
+      border: 2px solid #ff0;
+      background: #000;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ff0;
+    }
 
-/* Table avec bordures solides épaisses */
-table, th, td {
-  border: 2px solid #000080;
-}
+    @keyframes spin {
+      from { transform: rotate(0deg);}
+      to { transform: rotate(360deg);}
+    }
 
-th {
-  background-color: #000080;
-  color: #ffff00;
-  font-weight: bold;
-}
+    nav {
+      margin-top: 10px;
+    }
 
-/* Boutons “relief” style 90’s */
-button {
-  background-color: #000080;
-  color: #ffff00;
-  border: 2px outset #ffff00;
-  padding: 5px 15px;
-  cursor: pointer;
-  font-weight: bold;
-  font-family: 'Courier New', monospace;
-}
+    nav a {
+      color: #ffff00;
+      font-weight: bold;
+      font-size: 0.7rem;
+      text-decoration: underline dotted;
+      margin: 0 10px;
+      padding: 4px 8px;
+      border: 2px outset #ff9900;
+      background-color: #800000;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
 
-button:hover {
-  border-style: inset;
-  background-color: #ffff00;
-  color: #000080;
-}
+    nav a:hover {
+      color: #00ff00;
+      background-color: #ff0000;
+      border-style: inset;
+      text-decoration: none;
+      animation: blink 0.6s infinite;
+      cursor: pointer;
+    }
 
-/* Inputs avec bordures pointillées */
-form input, form textarea {
-  border: 2px dotted #000080;
-  background-color: #ffffe0;
-  color: #000080;
-  font-family: 'Courier New', monospace;
-  font-size: 1em;
-  padding: 4px;
-}
+    section {
+      background-color: #000033;
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 20px;
+      border: 4px ridge #ff9900;
+      color: #ffff00;
+      text-align: left;
+      box-shadow: 0 0 20px #ff9900;
+    }
 
-/* Mise en forme du footer */
-footer {
-  background-color: #000080;
-  color: #ffff00;
-  text-align: center;
-  font-weight: bold;
-  border-style: inset;
-  padding: 10px;
-  margin-top: 10px;
-}
+    h2 {
+      font-size: 1.2rem;
+      color: #00ff00;
+      margin-top: 0;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px #000;
+      animation: blink 1.2s infinite;
+      border-bottom: 2px dashed #ff0;
+      padding-bottom: 5px;
+    }
 
-/* Image style avec bordures pixelisées */
-.carte img {
-  border: 3px ridge #000080;
-  width: 100%;
-  max-width: 220px;
-}
+    h3 {
+      font-size: 1rem;
+      color: #ffff00;
+      margin-bottom: 5px;
+      text-shadow: 1px 1px #440000;
+    }
 
-/* Flex container - revenir au layout vertical (typique 90's) */
-.especes {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-}
+    .especes {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-/* Chaque carte prend toute la largeur */
-.carte {
-  border: 2px dotted #000080;
-  background-color: #e0e0ff;
-  margin: 10px auto;
-  padding: 10px;
-  max-width: 300px;
-  text-align: center;
-  font-weight: bold;
-}
+    .carte {
+      background: #330000;
+      border: 3px outset #ff0;
+      border-radius: 8px;
+      width: 220px;
+      padding: 10px;
+      color: #ffff00;
+      box-shadow: 0 0 15px #ff0 inset;
+      cursor: default;
+      transition: transform 0.2s ease;
+    }
 
-/* Responsive minimaliste */
-@media (max-width: 600px) {
-  .carte {
-    max-width: 100%;
-  }
-}
+    .carte:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #00ff00 inset;
+      border-style: inset;
+    }
 
-/* Un petit effet clignotant sur le titre contact (nostalgie) */
-#contact h2 {
-  animation: blink 1.2s steps(2, start) infinite;
-  color: #ff0000;
-  font-weight: bold;
-}
+    .carte img {
+      width: 100%;
+      border: 3px solid #ffff00;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      filter: contrast(1.2) saturate(1.3);
+    }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.7rem;
+      color: #ffff00;
+      border: 3px outset #ff9900;
+      box-shadow: 0 0 10px #ff9900 inset;
+    }
 
+    th, td {
+      border: 2px inset #ff9900;
+      padding: 10px 6px;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: #ff0000;
+      color: #ffff00;
+      text-shadow: 0 0 3px #000;
+      font-weight: 700;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #330000;
+    }
+
+    tbody tr:hover {
+      background: #ff9900;
+      color: #000;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+      font-size: 0.7rem;
+      color: #ffff00;
+    }
+
+    footer {
+      background: #800000;
+      color: #ffff00;
+      font-weight: bold;
+      font-size: 0.7rem;
+      padding: 15px;
+      border-top: 4px double #ff9900;
+      box-shadow: 0 -5px 15px #ff9900 inset;
+      user-select: none;
+    }
+
+    /* Formulaire style 90s kitsch */
+    form {
+      background: #000033;
+      padding: 15px;
+      border: 4px ridge #ff9900;
+      box-shadow: 0 0 15px #ff9900 inset;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 0 auto;
+      color: #ffff00;
+      font-size: 0.7rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
+      text-shadow: 1px 1px #000;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      background: #000066;
+      border: 2px inset #ffff00;
+      color: #ffff00;
+      padding: 8px;
+      width: 100%;
+      font-family: 'Press Start 2P', monospace, monospace;
+      font-size: 0.7rem;
+      margin-bottom: 12px;
+      resize: vertical;
+      box-shadow: 0 0 8px #ffff00 inset;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      background: #000099;
+      outline: none;
+      border-color: #00ff00;
+      box-shadow: 0 0 15px #00ff00 inset;
+      color: #00ff00;
+    }
+
+    button {
+      background-color: #ff0000;
+      border: 3px outset #ffff00;
+      color: #ffff00;
+      font-weight: 900;
+      padding: 12px 25px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff0;
+      animation: blink 1.5s infinite;
+      user-select: none;
+      transition: all 0.3s ease;
+      border-radius: 12px;
+      font-family: 'Press Start 2P', monospace, monospace;
+    }
+
+    button:hover {
+      background-color: #00ff00;
+      color: #000;
+      border-style: inset;
+      animation: none;
+      box-shadow: 0 0 15px #00ff00;
+    }
+
+    /* Responsive simple */
+    @media (max-width: 600px) {
+      .especes {
+        flex-direction: column;
+      }
+      section {
+        padding: 15px;
+      }
+      nav a {
+        font-size: 0.6rem;
+        margin: 0 6px;
+        padding: 4px 6px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
+    <div class="logo" title="Logo vintage animé"></div>
     <h1>Louiscreed Fourmis</h1>
     <p>Passionné par l’élevage de fourmis depuis 2012</p>
     <nav>
@@ -262,11 +394,11 @@ footer {
     <h2>Contact</h2>
     <form>
       <label for="nom">Nom :</label>
-      <input type="text" id="nom" placeholder="Votre nom" />
+      <input type="text" id="nom" placeholder="Votre nom" required />
       <label for="email">Email :</label>
-      <input type="email" id="email" placeholder="Votre email" />
+      <input type="email" id="email" placeholder="Votre email" required />
       <label for="message">Message :</label>
-      <textarea id="message" rows="4" placeholder="Votre message..."></textarea>
+      <textarea id="message" rows="4" placeholder="Votre message..." required></textarea>
       <button type="submit">Envoyer</button>
     </form>
   </section>
