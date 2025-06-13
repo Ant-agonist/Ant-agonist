@@ -406,6 +406,32 @@
   <footer>
     <p>&copy; 2025 Louiscreed Fourmis. Tous droits réservés.</p>
   </footer>
+<!-- Musique d'ambiance -->
+<audio id="musique" autoplay loop hidden>
+  <source src="sons/ambiance-retro.mp3" type="audio/mpeg">
+  Votre navigateur ne supporte pas l’audio HTML5.
+</audio>
+
+<!-- Effet sonore bouton -->
+<audio id="clickSound">
+  <source src="sons/click-rigolo.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Lecture du son rigolo quand on clique sur un bouton ou un lien
+  const clickSound = document.getElementById('clickSound');
+  document.addEventListener('click', function (e) {
+    if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') {
+      clickSound.currentTime = 0; // Reset pour répétition rapide
+      clickSound.play();
+    }
+  });
+
+  // Astuce pour lecture automatique sur mobile (nécessite une interaction)
+  window.addEventListener('touchstart', () => {
+    document.getElementById('musique')?.play().catch(() => {});
+  }, { once: true });
+</script>
 
 </body>
 </html>
